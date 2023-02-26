@@ -1,0 +1,55 @@
+{
+	"layer": "top",
+	"modules-left": ["wlr/workspaces"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory","battery", "clock"],
+	"mpd": {
+		"tooltip": false,
+		"format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+		"format-disconnected": "ﳌ",
+		"format-stopped": "",
+        "state-icons": {
+            "playing": "",
+            "paused": ""
+        }
+	},
+	"hyprland/window": {
+		"separate-outputs": true,
+		"format":"{}"
+	},	
+	"wlr/workspaces": {
+		"format": "{icon}",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"on-click": "activate",
+		"sort-by-number": true,
+		"all-outputs": true
+   },
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-icons": {
+			"default": ["奄", "奔", "墳"]
+		}
+	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": " {essid} {ipaddr}",
+		"format-ethernet": " {ipaddr}"
+	},
+	"cpu": {
+		"tooltip": false,
+		"format": " {}%"
+	},
+	"battery": {
+		"tooltip": true,
+		"format": "{icon} {capacity}%",
+		"format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+		"tooltip-format": "{time}"
+	},
+	"memory": {
+		"tooltip": false,
+		"format": " {}%"
+	}
+}
